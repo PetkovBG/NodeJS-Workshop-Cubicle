@@ -12,6 +12,7 @@ setupViewEngine(app);
 // require('./config/viewEngine')(app) - alternative option for the above
 
 app.use(express.static('src/public'));
+app.use(express.urlencoded({extended: false}));
 app.use(routes);
 
 app.listen(config.PORT, () => console.log(`Server is now running on port ${config.PORT}...`));
