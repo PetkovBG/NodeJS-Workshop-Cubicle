@@ -9,6 +9,8 @@ setupViewEngine(app);
 
 // require('./config/viewEngine')(app) - alternative option for the above
 
+app.use(express.static('src/public'));
+
 app.get('/', (req, res) => {
     res.render('home');
 });
