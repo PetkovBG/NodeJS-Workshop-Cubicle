@@ -26,5 +26,8 @@ Node JS, Express JS & Handlebars Workshop
 ![image](https://user-images.githubusercontent.com/97334281/213988929-fe6ca472-d1d8-4ec8-84f4-9ae3b84ee835.png)
 
 ### Search by name
-## The results are filtered and only cubes including the search word appear on the home screen
+# The results are filtered and only cubes including the search word appear on the home screen
 ![image](https://user-images.githubusercontent.com/97334281/213988997-372ae0ed-de3b-4458-9bd3-fbc057dedbd5.png)
+
+#Filteres results by difficulty level
+![image](https://user-images.githubusercontent.com/97334281/213990548-e53c29e6-91f6-4de0-b482-38a01de2e0c9.png)
