@@ -35,4 +35,8 @@ Node JS, Express JS & Handlebars Workshop
 ### Filtered results by using all three search parameters. The search input fields are left filled out for better user experience
 ![image](https://user-images.githubusercontent.com/97334281/213990795-4441598d-2f5b-4418-ac25-b317cd88c1c3.png)
 
+## 404 Redirect
+### If an invalid cube number is being accessed then the page redirects to '404 - Page not found'
+![image](https://user-images.githubusercontent.com/97334281/213991180-4d1a5301-3be5-4e4f-8108-0cddcb917550.png)
+
 
