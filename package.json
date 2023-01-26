@@ -4,8 +4,9 @@
   "description": "Node JS Project",
   "main": "src/index.js",
   "scripts": {
-    "start": "node ./src/index.js",
-    "dev": "nodemon ./src/index.js"
+    "prod": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
