@@ -7,7 +7,9 @@ const accessorySchema = new mongoose.Schema({
     },
     imageUrl: {
         type: String,
-        required: true
+        required: true,
+        match: [/^https?:\/\//, 'Invalid URL']
+
     },
     description: {
         type: String,
