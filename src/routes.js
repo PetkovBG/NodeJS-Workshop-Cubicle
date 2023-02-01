@@ -4,6 +4,8 @@ const cubeController = require('./controllers/cubeController');
 const homeController = require('./controllers/homeController');
 const accessoryController = require('./controllers/accessoryControler');
 
+const authController = require('./controllers/authController');
+
 //The above router setup can be done with the method below
 // const express = require('express');
 // const Router = express.Router;
@@ -13,6 +15,8 @@ router.get('/', homeController.getHomePage);
 
 router.get('/about', homeController.getAboutPage);
 router.get('/404', homeController.getErrorPage);
+
+router.use('/', authController);
 
 router.get('/cubes/create', cubeController.getCreateCube);
 router.post('/cubes/create', cubeController.postCreateCube);
