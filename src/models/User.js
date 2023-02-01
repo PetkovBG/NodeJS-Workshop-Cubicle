@@ -13,7 +13,14 @@ const userSchema = new mongoose.Schema({
         minLength: [6, 'Password is too short'],
     }
 });
+
+userSchema.method('validatePassword', function(password) {
+return bcrypt.compare(password, this.password);
+})
+
 //try async
+
+// this could be done in the service section
 userSchema.pre('save', function (next) {
     bcrypt.hash(this.password, 10)
         .then(hash => {
