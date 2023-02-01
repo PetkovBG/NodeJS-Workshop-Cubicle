@@ -13,7 +13,7 @@
                     <select id="difficulty" name="difficultyLevel" />
 
                     {{#each difficultyLevels}}
-                    <option value="{{key}}" {{#if selected}} selected {{/if}}>{{key}} - {{label}}</option>
+                    {{>difficultyLevel}}
                    {{/each}}
                     </select>
                     <input type="submit" value="Edit">
