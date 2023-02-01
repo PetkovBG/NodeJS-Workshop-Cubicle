@@ -13,12 +13,10 @@ router.post('/login', async (req, res) => {
     try {
         const user = await authService.login(username, password);
         console.log(user);
-
     } catch (err) {
         console.log(err);
         return res.redirect('/');
     }
-
     res.redirect('/');
 })
 
