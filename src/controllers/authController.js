@@ -15,10 +15,13 @@ router.post('/login', async (req, res) => {
         console.log(token);
         res.cookie('auth', token, {httpOnly: true });
     } catch (err) {
-        console.log(err);
+        console.log(err.message);
+        return res.render('auth/login', {error: err.message});
     }
     res.redirect('/');
 });
+
+
 
 router.get('/register', (req, res) => {
     res.render('auth/register')
