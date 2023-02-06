@@ -27,11 +27,13 @@ router.get('/register', (req, res) => {
     res.render('auth/register')
 });
 
-router.post('/register', async (req, res) => {
+router.post('/register', async (req, res, next) => {
     const {username, password, repeatPassword } = req.body;
 
     if(password !== repeatPassword) {
-        return res.redirect('/404'); 
+        // return next(new Error(`Password missmatch`));
+
+        return res.render('auth/register', {error: 'Passord missmatch!'});
     }
 
     const existingUser = await authService.getUserByUsername(username);
