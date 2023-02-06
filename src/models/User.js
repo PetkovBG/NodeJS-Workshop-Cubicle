@@ -5,12 +5,21 @@ const userSchema = new mongoose.Schema({
     username: {
         type: String,
         required: true,
-        minLength: 3
+        minLength: [5, 'Username is too short, minimum allowed length is 5'],
+        unique: true,
+        // validate: [/^[a-zA-Z0-9]+$/, 'Message here']
+        validate: {
+            validator: function(value) {
+                return /^[a-zA-Z0-9]+$/.test(value);
+            },
+            message: 'Username should consist only of Latin letters and digits!'
+        }
     },
     password: {
         type: String,
         required: true,
-        minLength: [6, 'Password is too short'],
+        minLength: [8, 'Password is too short'],
+        validate: [/^[a-zA-Z0-9]+$/, 'Password not meeting requirements!']
     }
 });
 
