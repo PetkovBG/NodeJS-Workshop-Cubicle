@@ -53,7 +53,7 @@ exports.getAttachAccessory = async (req, res) => {
 
 const cube = await Cube.findById(req.params.cubeId).lean();
 const accessories = await Accessory.find({ _id: {$nin: cube.accessories}}).lean();
-
+// console.log(accessories); //this returns an array with the available accessoaries
     res.render('cube/attach', { cube, accessories });
 }
 
